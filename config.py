@@ -1,5 +1,3 @@
-import argparse
-from argparse import ArgumentParser
 from transformers import BertTokenizer
 
 MODEL_PATH = "try"
@@ -21,25 +19,6 @@ TESTING_PATH = "./data/test/ca_data"
 
 TOKENIZER = BertTokenizer.from_pretrained("cl-tohoku/bert-base-japanese-whole-word-masking")
 # tokenizer = BertTokenizer.from_pretrained("cl-tohoku/bert-base-japanese")
-
-def parse_args():
-    parser = ArgumentParser()
-
-    # Testset Path
-    parser.add_argument("--testpath")
-
-    # training data
-    parser.add_argument("--largeset", action='store_const', default=False, const=True)
-
-    # Model train
-    parser.add_argument("--tag", action='store_const', default=False, const=True)
-    parser.add_argument("--predict", action='store_const', default=False, const=True)
-
-    args = parser.parse_args()
-
-    return args
-
-args = parse_args()
 
 
 if __name__ == "__main__":

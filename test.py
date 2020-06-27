@@ -4,11 +4,11 @@ import function
 import os
 import torch
 import json
+import argparse
 import torch.nn as nn
 import numpy as np
 import pandas as pd
 
-from config import args
 from model import BERTBaseJapanese
 
 
@@ -49,4 +49,9 @@ def predict(path):
 
 
 if __name__ == "__main__":
-    predict(args.testpath)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("test_path")
+
+    args = parser.parse_args()
+
+    predict(args.test_path)

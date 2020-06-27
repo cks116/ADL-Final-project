@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import torch.nn as nn
 
-from config import args
+from param import args
 from model import BERTBaseJapanese
 from transformers import AdamW, get_linear_schedule_with_warmup
 
