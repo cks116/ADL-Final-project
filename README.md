@@ -31,5 +31,5 @@ bash download.sh
 Then, you can test
 
 ```bash
-python3 test.py --testpath <path_to_test_set_directory>
+python3 test.py <path_to_test_set_directory>
 ```
